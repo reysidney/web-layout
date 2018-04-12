@@ -5,6 +5,9 @@ This project will instruct me on how to add packages, libraries, etc
     sudo apt-get update
     sudo apt-get install nodejs
 
+### Check if version of NPM to make sure it is installed
+    npm -v
+
 ### Install Bower
     npm install -g bower
 
@@ -24,5 +27,10 @@ This project will instruct me on how to add packages, libraries, etc
     npm install gulp --save-dev || npm install -g gulp --save-dev
     npm install gulp-concat --save-dev
     npm install gulp-sass --save-dev
-    npm install gulp-minify --save-dev
-    npm install gulpjs-obfuscate --save-dev
+    npm install gulp-clean-css --save-dev
+    npm install gulp-obfuscate --save-dev
+    npm install gulp-js-obfuscator --save-dev
+    npm install gulp-rename --save-dev
+
+### Compile CSS/JS
+    gulp

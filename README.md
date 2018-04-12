@@ -16,15 +16,13 @@ This project will instruct me on how to add packages, libraries, etc
 - Make you to make package private.
 
 ### Install Bootstrap & Jumbotron
-    bower install bootstrap --save-dev
-    bower install bootstrap-admin-template --save-dev
-    bower install jumbotron --save-dev
+    bower install bootstrap-sass --save-dev
     
 ### Initialize NPM
     npm init
 
 ### Install Gulp
-    npm install gulp --save-dev || npm install -g gulp --save-dev
+    npm install -g gulp
     npm install gulp-concat --save-dev
     npm install gulp-sass --save-dev
     npm install gulp-rename --save-dev

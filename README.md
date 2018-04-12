@@ -9,5 +9,6 @@ This project will instruct me on how to add packages, libraries, etc
 
 ## init bower
     $ bower init
+    
 - Make you to make package private.
 

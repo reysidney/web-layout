@@ -1,3 +1,8 @@
+assets/scripts/app*.js
+assets/styles/app*.css
+**/*/app.min.css
+**/*/app.min.js
+
 bower_components
 node_modules
 bower.json

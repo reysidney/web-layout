@@ -24,7 +24,7 @@ gulp.task('styles', function () {
     ])
         .pipe(sass({
             includePaths: [
-                paths.bower + 'boostrap/scss'
+                paths.bower + 'bootstrap-sass/assets/stylesheets'
             ]
         }))
         .pipe(concat('app.css'))
@@ -36,12 +36,8 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src([
-        paths.bower + 'jquery/dist/jquery.js',
-        paths.bower + 'jumbotron/jumbotron.js',
-        paths.bower + 'handlebars/handlebars.js',
-        paths.bower + 'wysihtml5x/dist/wysihtml5x.js',
-        paths.bower + 'bootstrap/dist/js/bootstrap.js',
-        paths.bower + 'bootstrap/js/dist/alert.js',
+        paths.bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
+        paths.assets.scripts + 'main.js',
     ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest(paths.assets.scripts))

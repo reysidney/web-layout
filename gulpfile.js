@@ -4,7 +4,7 @@ var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var obfuscate = require('gulp-obfuscate');
-var minify = require('gulp-minify');
+var uglify = require('gulp-uglify');
 
 var paths = {
     bower : './bower_components/',
@@ -28,7 +28,10 @@ gulp.task('styles', function () {
             ]
         }))
         .pipe(concat('app.css'))
-        .pipe(gulp.dest(paths.assets.styles));
+        .pipe(gulp.dest(paths.assets.styles))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.public.css));
 });
 
 gulp.task('scripts', function () {
@@ -41,45 +44,17 @@ gulp.task('scripts', function () {
         paths.bower + 'bootstrap/js/dist/alert.js',
     ])
         .pipe(concat('app.js'))
-        .pipe(gulp.dest(paths.assets.scripts));
-});
-
-gulp.task('minify-css', function() {
-    return gulp.src(paths.assets.styles + '*.css')
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.public.css));
-});
-
-gulp.task('minify-js', function() {
-    gulp.src(paths.assets.scripts + 'app.js')
-        .pipe(minify({
-            ext:{
-                src:'-debug.js',
-                min:'.js'
-            },
-            exclude: ['tasks'],
-            ignoreFiles: ['.combo.js', '-min.js']
-        }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.assets.scripts + 'minified'));
-});
-
-gulp.task('obfuscate-js', function () {
-    gulp.src(paths.assets.scripts + 'minified/app.min.js')
+        .pipe(gulp.dest(paths.assets.scripts))
+        .pipe(rename('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.assets.scripts))
         .pipe(obfuscate({ replaceMethod: obfuscate.ZALGO }))
         .pipe(gulp.dest(paths.public.js));
 });
 
 gulp.task('watch', function () {
-    watch();
-});
-
-function watch () {
     gulp.watch(paths.assets.styles + '**/*.scss', ['styles']);
-    gulp.watch(paths.assets.styles + '*.css', ['minify-css']);
-    gulp.watch(paths.assets.scripts + 'app.js', ['minify-js']);
-    gulp.watch(paths.assets.scripts + 'minified/app.min.js', ['obfuscate-js']);
-}
+    gulp.watch(paths.assets.scripts + '**/*.js', ['scripts']);
+});
 
 gulp.task('default', ['styles','scripts']);

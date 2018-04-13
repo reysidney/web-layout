@@ -15,8 +15,9 @@ This project will instruct me on how to add packages, libraries, etc
     bower init
 - Make sure you make package private.
 
-### Install Bootstrap SASS
+### Install Bower Packages
     bower install bootstrap-sass --save-dev
+    bower install fontawesome --save-dev
     
 ### Initialize NPM
     npm init

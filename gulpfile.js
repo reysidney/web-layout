@@ -24,7 +24,8 @@ gulp.task('styles', function () {
     ])
         .pipe(sass({
             includePaths: [
-                paths.bower + 'bootstrap-sass/assets/stylesheets'
+                paths.bower + 'bootstrap-sass/assets/stylesheets',
+                paths.bower + 'fontawesome/web-fonts-with-css/scss'
             ]
         }))
         .pipe(concat('app.css'))

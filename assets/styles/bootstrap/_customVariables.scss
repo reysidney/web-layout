@@ -5,7 +5,7 @@ $bootstrap-sass-asset-helper: false !default;
 
 // Custom
 $main-color: #1a8c97;
-$white-color: #FFF;
+$navbar-color: #FFF;
 
 //== Colors
 //
@@ -365,9 +365,9 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    70px !default;
+$navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
+$navbar-border-radius:             0px !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
@@ -377,10 +377,10 @@ $navbar-default-bg:                $main-color;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                $white-color !default;
-$navbar-default-link-hover-color:          $white-color !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         $white-color !default;
+$navbar-default-link-color:                $navbar-color !default;
+$navbar-default-link-hover-color:          $navbar-color !default;
+$navbar-default-link-hover-bg:             darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-color:         $navbar-color !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;

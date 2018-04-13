@@ -24,8 +24,8 @@ gulp.task('styles', function () {
     ])
         .pipe(sass({
             includePaths: [
-                paths.bower + 'bootstrap-sass-official/assets/stylesheets',
-                paths.bower + 'components-font-awesome/scss'
+                paths.bower + 'bootstrap-sass/assets/stylesheets',
+                paths.bower + 'font-awesome/scss'
             ]
         }))
         .pipe(concat('app.css'))
@@ -38,8 +38,7 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         paths.bower + 'jquery/dist/jquery.js',
-        paths.bower + 'bootstrap-sass-official/assets/javascripts/bootstrap.js',
-        paths.bower + 'fontawesome/svg-with-js/js/fontawesome.js',
+        paths.bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
         paths.assets.scripts + 'main.js',
     ])
         .pipe(concat('app.js'))

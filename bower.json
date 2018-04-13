@@ -1,0 +1,23 @@
+{
+  "name": "common-web-project",
+  "homepage": "https://github.com/reysidney/common-web-project",
+  "authors": [
+    "reysidney <rscarredo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap-sass-official": ">=3.3.0",
+    "components-font-awesome": "^4.7.0"
+  }
+}

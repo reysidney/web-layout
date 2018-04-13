@@ -5,5 +5,4 @@ assets/styles/app*.css
 
 bower_components
 node_modules
-bower.json
 package*.json

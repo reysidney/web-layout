@@ -17,14 +17,14 @@
 
     .container {
         background: #fff;
-        opacity: 0.8;
+        opacity: 0.9;
         padding: 20px 30px 30px 30px;
     }
 }
 
 .showcase, .title-bar {
     margin-top: 40px;
-    background: url('../img/bg-aurora.jpeg') no-repeat 0 -600px;
+    background: url('../img/bg.jpeg') no-repeat 0 -100px;
 }
 
 .title-bar {
@@ -63,7 +63,6 @@
 
 .section-c {
     padding: 60px;
-    margin-top: 40px;
     text-align: center;
     background: $main-color;
     color: set-text-color($main-color);

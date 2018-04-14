@@ -71,6 +71,11 @@
     .btn-primary {
         background: set-background-color($main-color, 10%);
     }
+
+    .btn-primary:hover {
+        background: set-background-color(set-background-color($main-color, 10%), 10%);
+        color: set-text-color-hover(set-text-color($main-color));
+    }
 }
 
 footer {

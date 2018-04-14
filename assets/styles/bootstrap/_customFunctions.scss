@@ -6,8 +6,16 @@
     }
 }
 
-@function set-background-color($color, $percent) {
+@function set-text-color-hover($color) {
     @if (lightness($color) > 50) {
+        @return darken($color, 15%);
+    } @else {
+        @return lighten($color, 15%);
+    }
+}
+
+@function set-background-color($color, $percent) {
+    @if (lightness($color) < 50) {
         @return darken($color, $percent);
     } @else {
         @return lighten($color, $percent);

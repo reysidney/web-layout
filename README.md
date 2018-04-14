@@ -29,3 +29,6 @@ or
     live-server --port=8000 
     
 to change port
+
+##Update Theme Main Color in _customVariables.scss
+    $main-color

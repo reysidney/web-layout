@@ -4,8 +4,8 @@ $bootstrap-sass-asset-helper: false !default;
 // --------------------------------------------------
 
 // Custom
-$main-color: #1a8c97;
-$navbar-color: #FFF;
+$main-color: #2980b9;
+$navbar-color: set-text-color($main-color);
 $icon-size: 60px;
 
 //== Colors
@@ -157,23 +157,23 @@ $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              set-text-color($brand-primary) !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
-$btn-success-color:              #fff !default;
+$btn-success-color:              set-text-color($brand-success) !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
-$btn-info-color:                 #fff !default;
+$btn-info-color:                 set-text-color($brand-info) !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
-$btn-warning-color:              #fff !default;
+$btn-warning-color:              set-text-color($brand-warning) !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 
-$btn-danger-color:               #fff !default;
+$btn-danger-color:               set-text-color($brand-danger) !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
@@ -380,9 +380,9 @@ $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 // Navbar links
 $navbar-default-link-color:                $navbar-color !default;
 $navbar-default-link-hover-color:          $navbar-color !default;
-$navbar-default-link-hover-bg:             darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-hover-bg:             set-background-color($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-active-color:         $navbar-color !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-bg:            set-background-color($navbar-default-bg, 10%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -718,11 +718,11 @@ $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
-$panel-inner-border:          darken($panel-bg, 90%) !default;
+$panel-inner-border:          darken($main-color, 90%) !default;
 $panel-footer-bg:             #f5f5f5 !default;
 
 $panel-default-text:          $gray-dark !default;
-$panel-default-border:        darken($panel-bg, 40%) !default;
+$panel-default-border:        darken($main-color, 5%) !default;
 $panel-default-heading-bg:    $main-color !default;
 
 $panel-primary-text:          #fff !default;

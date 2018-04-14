@@ -15,6 +15,9 @@ This project is used for making web projects
     npm install
     bower install
 
+##Update Theme Main Color in _customVariables.scss
+    $main-color
+    
 ## Compile CSS/JS
     gulp
 
@@ -29,6 +32,3 @@ or
     live-server --port=8000 
     
 to change port
-
-##Update Theme Main Color in _customVariables.scss
-    $main-color
